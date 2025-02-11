@@ -37,13 +37,37 @@ const DUMMY_DATA = [
 
 export default function Home() {
 
-  const [modalIsOpen, setModalIsOpen] = useState(true);
+  const [showAddIncomeModal,setShowAddIncomeModal] = useState(false);
 
   return (
     <>
-    {/*Modal */}
-    <Modal show={modalIsOpen} onClose={setModalIsOpen}>
-      <h3>Hello World</h3> 
+    {/*Add Income Modal */}
+    <Modal show={showAddIncomeModal} onClose={setShowAddIncomeModal}>
+      <form className="flex flex-col gap-4 p-6">
+        <div className="input-group">
+          <label htmlFor="amount">Income Amount</label>
+          <input
+          type="number"
+          name="amount"
+          min={0.01}
+          step={0.01}
+          placeholder="Enter income amount"
+          required/>
+        </div>
+
+        <div className="input-group">
+          <label htmlFor="Description">Description</label>
+          <input 
+          type="text"
+          name="description"
+          placeholder="Enter income descritpion"
+          required/>
+        </div>
+
+          <button type="submit" className="btn btn-primary">
+            Add Entry
+          </button>
+      </form>
     </Modal>
 
     <main className="container max-w-2xl px-6 mx-auto">
@@ -53,7 +77,10 @@ export default function Home() {
       </section>
    
       <section className="flex items-center gap-2 py-3">
-        <button  onClick={() => {setModalIsOpen(true)}} className="btn btn-primary">+expenses</button>
+        <button  onClick={() => {
+           setShowAddIncomeModal(true);
+          }}
+          className="btn btn-primary">+expenses</button>
         <button className="btn btn-primary-outline">+income</button>
       </section>
 
