@@ -3,6 +3,7 @@ import { currencyFormatter } from "@/app/lib/utils";
 import Modal from "@/app/components/modal";
 
 import {FinanceContext} from "@/app/lib/store/finance-context";
+import { authContext } from "@/app/lib/store/auth-context";
 
 //Icons
 import {FaRegTrashAlt} from "react-icons/fa";
@@ -13,14 +14,17 @@ function AddIncomeModal({show, onClose}){
     const descriptionRef = useRef();
     const {income, addIncomeItem, removeIncomeItem} = useContext(FinanceContext);
 
+    const { user } = useContext(authContext);
+
     //Handler Functions
     const addIncomeHandler = async (e) => {
         e.preventDefault();
     
         const newIncome = {
-          amount: amountRef.current.value,
+          amount: +amountRef.current.value,
           description: descriptionRef.current.value,
           createdAt: new Date(),
+          uid: user.uid,
         };
 
         try {
