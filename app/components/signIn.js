@@ -2,6 +2,7 @@
 import { auth } from "../lib/firebase";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import {useContext, useEffect, useState} from "react";
+import { toast } from "react-toastify";
 
 //import { authContext } from "../lib/store/auth-context";
 
@@ -32,8 +33,10 @@ function SignIn() {
                 password
             );
             console.log(userCredential.user.email);
-        } catch (e) {
-            console.log(e)
+            toast.success("successfully created account")
+        } catch (error) {
+            console.log(error.message)
+            toast.error("Email Already In Use")
         }
     };
 
@@ -45,8 +48,10 @@ function SignIn() {
                 password
             );
             console.log(userCredential.user.email);
-        } catch (e) {
-            console.log(e)
+            toast.success("successful login")
+        } catch (error) {
+            console.log(error.message)
+            toast.error("Wrong Password")
         }
     };
 
@@ -54,8 +59,10 @@ function SignIn() {
         try { 
             await signOut(auth);
             console.log('signed out');
-        } catch (e) {
-            console.log(e)
+            toast.success("successful sign Out")
+        } catch (error) {
+            console.log(error.message)
+            toast.error(error.message)
         }
     }
     // const {googleLoginHandler} = useContext(authContext);
