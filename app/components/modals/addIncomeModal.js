@@ -5,6 +5,8 @@ import Modal from "@/app/components/modal";
 import {FinanceContext} from "@/app/lib/store/finance-context";
 import { authContext } from "@/app/lib/store/auth-context";
 
+import { toast } from "react-toastify";
+
 //Icons
 import {FaRegTrashAlt} from "react-icons/fa";
 
@@ -31,9 +33,11 @@ function AddIncomeModal({show, onClose}){
             await addIncomeItem(newIncome);
             descriptionRef.current.value = "";
               amountRef.current.value = "";
-
+            toast.success("added income item")
         } catch (error) {
             console.log(error.message);
+            toast.error(error.message)
+
         }
         
     
@@ -42,8 +46,10 @@ function AddIncomeModal({show, onClose}){
       const deleteIncomeEntryHandler = async (incomeId) => {
        try {
            await removeIncomeItem(incomeId);
+           toast.success("removed income item")
        } catch (error) {
            console.log(error.message);
+           toast.error(error.message)
        }
       };
 

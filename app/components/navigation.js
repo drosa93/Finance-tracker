@@ -35,7 +35,11 @@ function Nav(){
      {user && !loading && (
 
      <nav className="flex items-center gap-4">
-       <div><ImStatsDots className="text-2xl"/></div>
+       <div>
+        <a href="#stats">
+        <ImStatsDots className="text-2xl"/>
+        </a>
+        </div>
        <div>
          <button onClick={logout} className="btn btn-danger">Sign Out </button>
        </div>

@@ -1,8 +1,12 @@
 "use client"
 
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Nav from "./components/navigation";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import FinanceContextProvider from "./lib/store/finance-context";
 import AuthContextProvider from "./lib/store/auth-context";
 
@@ -12,6 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <AuthContextProvider>
         <FinanceContextProvider>
+        <ToastContainer/>
         <Nav/>
         {children}
         </FinanceContextProvider>
