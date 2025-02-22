@@ -65,14 +65,14 @@ function SignIn() {
              <h1 className="mb-6 text-6xl font-bold text-center">Welcome 👋👋🏽👋🏾👋🏿</h1>
 
             <div className="flex flex-col overflow-hidden shadow-md shadow-slate-500 bg-slate-800 rounded-2xl">
-                 <div className="h-52">
-                    <input
+                 <div className="h-52 m-2 p-2">
+                    <input className="mx-2"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="put your email"
+                    placeholder="email"
                     />
-                    <input
+                    <input className="mx-2"
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
