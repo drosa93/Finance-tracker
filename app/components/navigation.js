@@ -22,7 +22,7 @@ function Nav(){
        className="object-cover w-full h-full" 
        src={user.photoURL}
        alt={user.displayName}
-       refferrerPolicy="no-referrer"
+       refferrerpolicy="no-referrer"
        />
 
        {/*User name*/}

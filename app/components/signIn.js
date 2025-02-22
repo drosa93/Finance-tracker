@@ -78,10 +78,11 @@ function SignIn() {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="password"
                     />
-                    <button onClick={signUp}>SignUp</button>
-                    <button onCLick={SignIn}>Login</button>
-                    <button onClick={logout}>Sign Out</button>
-
+                    <div className="flex flex-row m-2">
+                    <button className="border rounded-xl  m-2 p-2" onClick={signUp}>SignUp</button>
+                    <button className="border rounded-xl  m-2 p-2" onClick={login}>Login</button>
+                    <button className="border rounded-xl  m-2 p-2" onClick={logout}>Sign Out</button>
+                    </div>
                  </div>
 
                  <div className="px-4 py-4 ">
