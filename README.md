@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+💰 Finance Tracker App
 
-## Getting Started
+Welcome to my Finance Tracker App repository! This project helps users manage their finances by tracking income, expenses, and financial trends in a simple and efficient way.
 
-First, run the development server:
+📌 About
 
-```bash
+This application provides a clear overview of financial transactions, making budgeting and expense tracking easy. Users can log transactions, categorize expenses, and analyze financial data.
+
+🛠 Tech Stack
+
+Frontend: Next.js, React, Tailwind CSS
+
+Backend: Firebase (Firestore for database)
+
+Authentication: Firebase Auth
+
+State Management: Context API / Redux (if applicable)
+
+Deployment: Vercel / Netlify
+
+📂 Project Structure
+
+/finance-tracker/
+  ├── public/          # Static assets
+  ├── components/      # Reusable UI components
+  ├── pages/          # Next.js pages
+  ├── styles/         # Global styles
+  ├── data/           # JSON or Firestore integration
+  ├── README.md       # Project documentation
+
+🎨 Features
+
+✅ Track income & expenses
+✅ Categorize transactions
+✅ Real-time database integration
+✅ Interactive charts & data visualization
+✅ Secure authentication (if applicable)
+✅ Mobile-friendly responsive UI
+
+🚀 Getting Started
+
+Clone the repository:
+
+git clone https://github.com/drosa93/finance-tracker.git
+
+Navigate to the project directory:
+
+cd finance-tracker
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🌍 Live Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Check out the live version here: https://finance-tracker44.netlify.app/
 
-## Learn More
+📚 Resources
 
-To learn more about Next.js, take a look at the following resources:
+Next.js Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tailwind CSS Docs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Firebase Docs
 
-## Deploy on Vercel
+💡 Contributions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This is a personal project, but feel free to submit issues or suggest improvements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔥 Let's Connect!
+
+GitHub: YourUsername
+
+LinkedIn: Your Profile
+
+Thanks for checking out my Finance Tracker App! 🚀
